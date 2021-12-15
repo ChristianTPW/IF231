@@ -211,11 +211,7 @@
       <div class="row">
         <div
           class="col-sm-3 mt-sm-2"
-          *ngFor="
-            let favorite of favorites;
-            let indexOfelement = index;
-            let l = count
-          "
+          *ngFor="let favorite of favorites; let indexOfelement = index"
         >
           <div class="card card-view">
             <div class="card-body">
@@ -223,7 +219,7 @@
                 <button
                   type="button"
                   class="btn btn-danger"
-                  (click)="removeFavorite(indexOfelement, l)"
+                  (click)="removeFavorite(indexOfelement)"
                 >
                   x
                 </button>

@@ -74,17 +74,8 @@ export class HomeComponent implements OnInit {
     );
   }
 
-  public removeFavorite(index: number, l: number) {
-    var temp: Weather[] = [];
-
-    this.favorites = temp.concat(
-      this.favorites.slice(0, index),
-      this.favorites.slice(index + 1, l)
-    );
-    //this.wthService.storeWeather(this.favorites);
-
-    if (l <= 1) {
-      this.noFavorite = true;
-    }
+  public removeFavorite(index: number) {
+    const newWeahters = this.wthService.deleteWeatherFromLocalStorage(index);
+    this.favorites = newWeahters;
   }
 }
