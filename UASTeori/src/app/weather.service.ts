@@ -39,35 +39,35 @@ export class WeatherService {
   getCurrentWeather() {
     return Promise.all([
       this.http.get<Weather>(
-        `http://api.openweathermap.org/data/2.5/weather?q=Jakarta&appid=02d0154f262374e33dea65535d66fecc`
+        `https://api.openweathermap.org/data/2.5/weather?q=Jakarta&appid=02d0154f262374e33dea65535d66fecc`
       ),
       this.http.get<Weather>(
-        `http://api.openweathermap.org/data/2.5/weather?q=Bandung&appid=02d0154f262374e33dea65535d66fecc`
+        `https://api.openweathermap.org/data/2.5/weather?q=Bandung&appid=02d0154f262374e33dea65535d66fecc`
       ),
       this.http.get<Weather>(
-        `http://api.openweathermap.org/data/2.5/weather?q=Tokyo&appid=02d0154f262374e33dea65535d66fecc`
+        `https://api.openweathermap.org/data/2.5/weather?q=Tokyo&appid=02d0154f262374e33dea65535d66fecc`
       ),
       this.http.get<Weather>(
-        `http://api.openweathermap.org/data/2.5/weather?q=Spain&appid=02d0154f262374e33dea65535d66fecc`
+        `https://api.openweathermap.org/data/2.5/weather?q=Spain&appid=02d0154f262374e33dea65535d66fecc`
       ),
       this.http.get<Weather>(
-        `http://api.openweathermap.org/data/2.5/weather?q=London&appid=02d0154f262374e33dea65535d66fecc`
+        `https://api.openweathermap.org/data/2.5/weather?q=London&appid=02d0154f262374e33dea65535d66fecc`
       ),
       this.http.get<Weather>(
-        `http://api.openweathermap.org/data/2.5/weather?q=Shanghai&appid=02d0154f262374e33dea65535d66fecc`
+        `https://api.openweathermap.org/data/2.5/weather?q=Shanghai&appid=02d0154f262374e33dea65535d66fecc`
       ),
       this.http.get<Weather>(
-        `http://api.openweathermap.org/data/2.5/weather?q=Palembang&appid=02d0154f262374e33dea65535d66fecc`
+        `https://api.openweathermap.org/data/2.5/weather?q=Palembang&appid=02d0154f262374e33dea65535d66fecc`
       ),
       this.http.get<Weather>(
-        `http://api.openweathermap.org/data/2.5/weather?q=Paris&appid=02d0154f262374e33dea65535d66fecc`
+        `https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=02d0154f262374e33dea65535d66fecc`
       ),
     ]);
   }
 
   getWeather(city: string) {
     return this.http.get<Weather>(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=02d0154f262374e33dea65535d66fecc`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=02d0154f262374e33dea65535d66fecc`
     );
   }
 
