@@ -81,7 +81,7 @@ export class HomeComponent implements OnInit {
       this.favorites.slice(0, index),
       this.favorites.slice(index + 1, l)
     );
-    this.wthService.storeWeather(this.favorites);
+    //this.wthService.storeWeather(this.favorites);
 
     if (l <= 1) {
       this.noFavorite = true;
