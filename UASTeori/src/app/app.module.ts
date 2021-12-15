@@ -8,6 +8,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
 import { WeatherService } from './weather.service';
 
+
 @NgModule({
   declarations: [AppComponent, AboutUsComponent, HomeComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],

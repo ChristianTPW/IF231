@@ -50,6 +50,18 @@ export class WeatherService {
       this.http.get<Weather>(
         `http://api.openweathermap.org/data/2.5/weather?q=Spain&appid=02d0154f262374e33dea65535d66fecc`
       ),
+      this.http.get<Weather>(
+        `http://api.openweathermap.org/data/2.5/weather?q=London&appid=02d0154f262374e33dea65535d66fecc`
+      ),
+      this.http.get<Weather>(
+        `http://api.openweathermap.org/data/2.5/weather?q=Shanghai&appid=02d0154f262374e33dea65535d66fecc`
+      ),
+      this.http.get<Weather>(
+        `http://api.openweathermap.org/data/2.5/weather?q=Palembang&appid=02d0154f262374e33dea65535d66fecc`
+      ),
+      this.http.get<Weather>(
+        `http://api.openweathermap.org/data/2.5/weather?q=Paris&appid=02d0154f262374e33dea65535d66fecc`
+      ),
     ]);
   }
 
