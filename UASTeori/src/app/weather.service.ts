@@ -76,9 +76,25 @@ export class WeatherService {
     localStorage.setItem('weather', JSON.stringify([...weathers, weather]));
   }
 
+  storeAllWeathers(weathers: Weather[]) {
+    localStorage.setItem('weather', JSON.stringify(weathers));
+  }
+
   getWeatherFromLocalStorage() {
     return JSON.parse(
       localStorage.getItem('weather') || JSON.stringify([])
     ) as Weather[];
+  }
+
+  deleteWeatherFromLocalStorage(index: number) {
+    const weathers = this.getWeatherFromLocalStorage();
+    const newWeathers = [
+      ...weathers.slice(0, index),
+      ...weathers.slice(index + 1),
+    ];
+
+    this.storeAllWeathers(newWeathers);
+
+    return newWeathers;
   }
 }
