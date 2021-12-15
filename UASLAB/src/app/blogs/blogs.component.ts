@@ -1,18 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import {NewsService } from '../news.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-blogs',
   templateUrl: './blogs.component.html',
-  styleUrls: ['./blogs.component.css']
+  styleUrls: ['./blogs.component.css'],
 })
 export class BlogsComponent implements OnInit {
-
-  public nws = [] as any;
-  constructor(private nwsService: NewsService) { }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.nws = this.nwsService.getEmployees();
+    const sessExists = localStorage.getItem('sess');
+    if (!sessExists) {
+      this.router.navigate(['/login']);
+      return;
+    }
+
+    // render blogs
   }
 
+  logout() {
+    localStorage.removeItem('sess');
+    this.router.navigate(['/login']);
+  }
 }

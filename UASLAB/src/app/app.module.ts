@@ -7,13 +7,15 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { DevelopersComponent } from './developers/developers.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NewsService } from './news.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewsComponent,
     BlogsComponent,
-    DevelopersComponent
+    DevelopersComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
